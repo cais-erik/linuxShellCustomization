@@ -11,3 +11,5 @@ for host in `cat hosts`;
 		do scp $file $host:$file
 	done;
 done;
+
+git status
