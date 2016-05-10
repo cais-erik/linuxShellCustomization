@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+git status
+
 echo "committing and pushing changes to git repo"
 git commit -am "auto commit"
 git push
@@ -11,5 +13,3 @@ for host in `cat hosts`;
 		do scp $file $host:$file
 	done;
 done;
-
-git status
