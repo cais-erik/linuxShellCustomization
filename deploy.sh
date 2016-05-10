@@ -7,7 +7,7 @@ git push
 echo "pushing files out to all servers"
 for host in `cat hosts`;
 	do echo deploying to $host;
-	for file in '.bashrc' '.bash_logout' '.bash_profile';
+	for file in `cat filesToScp`;
 		do scp $file $host:$file
 	done;
 done;
